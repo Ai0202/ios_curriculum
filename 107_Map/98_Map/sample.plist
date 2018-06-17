@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Mt.Fuji</key>
+	<dict>
+		<key>latitude</key>
+		<string>35.2749915</string>
+		<key>longitude</key>
+		<string>136.9391058</string>
+		<key>description</key>
+		<string>top of Mt in Japan</string>
+	</dict>
+	<key>Mt.Kitadake</key>
+	<dict>
+		<key>latitude</key>
+		<string>35.2749215</string>
+		<key>longitude</key>
+		<string>136.9391058</string>
+		<key>description</key>
+		<string>second of Mt in Japan</string>
+	</dict>
+	<key>Mt.Nokogiri</key>
+	<dict>
+		<key>latitude</key>
+		<string>35.1378736</string>
+		<key>longitude</key>
+		<string>136.9504091</string>
+		<key>description</key>
+		<string>Mt at Chiba</string>
+	</dict>
+</dict>
+</plist>
