@@ -12,18 +12,12 @@ class SecondViewController: UIViewController {
     
     let keyName = "imageSwitchFlg"
     
-    let myDefault = UserDefaults.standard
-    
     @IBOutlet weak var imageSwitch: UISwitch!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var imageSwitchFlg = true
-        
-        if myDefault.object(forKey: keyName) != nil {
-            imageSwitchFlg = myDefault.object(forKey: keyName) as! Bool
-        }
+        let imageSwitchFlg = UserDefaults.standard.bool(forKey: keyName)
         
         imageSwitch.isOn = imageSwitchFlg
     }
@@ -32,15 +26,10 @@ class SecondViewController: UIViewController {
     @IBAction func changeImageSwitch(_ sender: UISwitch) {
         
         //データの書き込み
-        myDefault.set(sender.isOn, forKey: keyName)
+        UserDefaults.standard.set(sender.isOn, forKey: keyName)
         
         //データを反映させる
-        myDefault.synchronize()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        UserDefaults.standard.synchronize()
     }
     
 

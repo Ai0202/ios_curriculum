@@ -18,36 +18,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var newsImage: UIImageView!
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
-        let myDefault = UserDefaults.standard
         
-        var imageSwitchFlg = true
+        let imageSwitchFlg = UserDefaults.standard.bool(forKey: keyName)
         
-        if myDefault.object(forKey: keyName) != nil {
-            imageSwitchFlg = myDefault.object(forKey: keyName) as! Bool
-        }
-        
-        if imageSwitchFlg {
-            newsImage.isHidden = false
-        }
-        else {
-            newsImage.isHidden = true
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        newsImage.isHidden = !imageSwitchFlg
         
     }
-    
-    
-    
-
 
 }
 
